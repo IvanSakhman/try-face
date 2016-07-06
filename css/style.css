@@ -1,0 +1,61 @@
+@-webkit-keyframes left-eye-anim {
+	from { -webkit-transform: none }
+	to { -webkit-transform: rotate(360deg) }
+}
+
+@-webkit-keyframes right-eye-anim {
+	from { -webkit-transform: scaleY(1) }
+	to { -webkit-transform: scaleY(0.3) }
+}
+
+.face {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	background-color: yellow;
+	position: relative;
+}
+
+.eye {
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	background: white;
+	position: absolute;
+	top: 50px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.left-eye {
+	left: 20px;
+}
+
+.right-eye {
+	right: 20px;
+}
+
+.point {
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background: black;
+}
+
+.left-point {
+	position: absolute;
+	left: 20px;
+}
+
+.right-point {
+	position: absolute;
+	right: 40px;
+	top: 70px;
+}
+
+.face:hover .left-eye {
+	-webkit-animation: left-eye-anim 2s linear 0s infinite;
+}
+
+.face:hover .right-eye {
+	-webkit-animation: right-eye-anim 2s ease-out 0s infinite alternate;
+}
